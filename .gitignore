@@ -135,3 +135,4 @@ local_lake/*
 .local
 .npm
 .bash_history
+.ipynb_checkpoints
