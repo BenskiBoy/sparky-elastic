@@ -1,0 +1,3 @@
+[submodule "notebooks/southwind"]
+	path = notebooks/southwind
+	url = https://github.com/BenskiBoy/southwind.git
