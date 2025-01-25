@@ -1,4 +1,4 @@
-FROM jupyter/pyspark-notebook:latest
+FROM jupyter/pyspark-notebook:spark-3.4.1
 
 USER root
 COPY requirements.txt .
@@ -17,5 +17,5 @@ RUN groupadd -f ${USER} && \
 
 USER ${NB_USER}
 
-RUN export PACKAGES="org.elasticsearch:elasticsearch-spark-30_2.12:8.15.1,io.delta:delta-core_2.12:2.4.0"
+RUN export PACKAGES="org.elasticsearch:elasticsearch-spark-30_2.12:8.15.1,io.delta:delta-core_2.12:2.4.0,io.delta:delta-spark_2.12:3.1.0"
 RUN export PYSPARK_SUBMIT_ARGS="--packages ${PACKAGES} pyspark-shell"

@@ -1,5 +1,6 @@
-delta-spark==2.4.0
+delta-spark==3.1.0
 deltalake
 jupyterlab 
 pandas
-pyspark==3.4.1
+pyspark==3.5.3
+mockpipe

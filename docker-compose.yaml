@@ -1,6 +1,6 @@
 services:
   spark-master:
-    image: bitnami/spark:latest
+    image: bitnami/spark:3.5.1
     hostname: spark-master
     environment:
       - INIT_DAEMON_STEP=setup_spark
@@ -22,7 +22,7 @@ services:
       - spark-master
     environment:
       # - GRANT_SUDO=yes
-      - PYSPARK_SUBMIT_ARGS=--packages org.elasticsearch:elasticsearch-spark-30_2.12:8.15.1,io.delta:delta-core_2.12:2.4.0 pyspark-shell
+      - PYSPARK_SUBMIT_ARGS=--packages org.elasticsearch:elasticsearch-spark-30_2.12:8.15.1,io.delta:delta-core_2.12:2.4.0,io.delta:delta-spark_2.12:3.1.0 pyspark-shell
     user: root
     command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
 
